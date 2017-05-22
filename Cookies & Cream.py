@@ -53,3 +53,7 @@ class Window(Frame):
         
         PortScanner = Connection.PortScan()
         Ports = PortScanner.Start()
+
+root = Tk()
+App = Window(root)
+root.mainloop()

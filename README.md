@@ -1,3 +1,2 @@
 # Cookies and Cream
-I dunno what this is, but its called cookies and cream now.
-You're shit
+This is something, we don't what. It's gonna be in both java and python. So... Yea.

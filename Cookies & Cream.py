@@ -1,4 +1,8 @@
 from Internals import Connection
+from tkinter import *
 import socket
 
-# Source https://thecodeninja.net/2014/12/udp-chat-in-python/
+class Window(Frame):
+    def __init__(self, master = None)
+        Frame.__init__(self, master)
+        self.master = master

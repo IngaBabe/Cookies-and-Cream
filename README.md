@@ -1,2 +1,8 @@
 # Cookies and Cream
-This is something, we don't what. It's gonna be in both java and python. So... Yea.
+UDP Chat Thing
+
+## v0.0.1
+
+(Python)[https://github.com/IngaBabe/Cookies-and-Cream/tree/Python-v0.0.1]
+
+(Java)[https://github.com/IngaBabe/Cookies-and-Cream/tree/Java-v0.0.1]

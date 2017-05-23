@@ -28,11 +28,6 @@ class Window(Frame):
         self.Lan_Servers = Frame(self.LanUI)
         self.LanUI.pack(fill = BOTH, expand = 1)
         
-        self.Lan_Status = Text(self.LanUI)
-        self.Lan_Status.pack(fill=BOTH, expand=1)
-        self.Lan_Status.insert("end", "Status")
-        self.Lan_Status.config(state=DISABLED)
-        
         self.LanUI.pack_forget()
         
         self.ChatUI=Label(self) # CHATGUI
@@ -49,7 +44,6 @@ class Window(Frame):
         
     def Lan_UI(self):
         self.LanUI.pack(fill=BOTH, expand=1)
-        self.UpdateStatus(self.Lan_Status, "Searching for servers on LAN...")
         
         PortScanner = Connection.PortScan()
         Ports = PortScanner.Start()

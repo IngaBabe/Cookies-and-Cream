@@ -2,8 +2,8 @@ import java.util.*;
 import javax.swing.JOptionPane;
 
 public class Client extends Thread {
-    private String sentence;
-    private byte[] sendData = new byte[1024];    
+	private String sentence;
+	private byte[] sendData = new byte[1024];    
 	private DatagramSocket clientSocket;
 	private InetAddress IPAddress;
 	private DatagramPacket sendPacket;  
@@ -12,7 +12,7 @@ public class Client extends Thread {
 	private static boolean did_I_Receive_The_Packet = true;
 	private static boolean should_I_Re_Send = false;
 	
-    @Override
+	@Override
 	public void run() {
 	    destPort = JOptionPane.showInputDialog(null, "Enter Port of Destination: ");
 		int port = Integer.parseInt(destPort);

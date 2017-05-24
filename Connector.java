@@ -1,6 +1,9 @@
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
-public void class Connector {
-    
+public class Connector {
+    public void Connect {
+        
+    }
 }

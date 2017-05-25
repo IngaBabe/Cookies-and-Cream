@@ -16,24 +16,19 @@ class Connect:
         s.connect(('', self.Port))
         self.s = s
     
-    def wait_for_message_THREAD(self, Msg):
+    def wait_for_message_THREAD(self, disp):
         while 1:
             try:
                 Msg, addr = self.s.recvform(20480)
-                if Msg:
-                    Msg["Msg"] = Msg
-                    Msg["Addr"] = Addr
-                else:
-                    Msg["Msg"] = None
-                    Msg["Addr"] = None
-                    break
+                
             except:
                 pass
     
     def wait_for_message(self):
-        Msg={}
-        msgThread=thread.Threading(target = wait_for_message_THREAD, args = (Msg))
+        msgThread=thread.Threading(target = wait_for_message_THREAD,args = (self.display_msg))
         msgThread.start()
+    
+    def desplay_message(self, Msg):
 
 class PortScan:
     def __init__(self, host = "localhost"):

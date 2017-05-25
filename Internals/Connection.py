@@ -28,8 +28,8 @@ class Connect:
                 pass
     
     def wait_for_message(self):
-        waitThreadiprocessingdtarget = wait_for_message_mp, self.Msg)
-        wait_for_message_process.start()
+        waitThread = threading.Thread(target = wait_for_message_mp, self.Msg)
+        waitThread.start()
     
     def display_msg(self, Msg):
         

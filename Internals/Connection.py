@@ -1,8 +1,10 @@
 import threading
 import socket
+import multiprocessing
 #7000 - 8000
 
 class Connect:
+    Msg={}
     def __init__(self, Port = "7777"):
         self.Port = Port
         self.Host = Host
@@ -16,19 +18,21 @@ class Connect:
         s.connect(('', self.Port))
         self.s = s
     
-    def wait_for_message_THREAD(self, disp):
+    def wait_for_message_mp(self, msg):
         while 1:
             try:
                 Msg, addr = self.s.recvform(20480)
-                
+                msg["Msg"] = Msg
+                msg["Addr"] = Addr
             except:
                 pass
     
     def wait_for_message(self):
-        msgThread=thread.Threading(target = wait_for_message_THREAD,args = (self.display_msg))
-        msgThread.start()
+        waitThreadiprocessingdtarget = wait_for_message_mp, self.Msg)
+        wait_for_message_process.start()
     
-    def desplay_message(self, Msg):
+    def display_msg(self, Msg):
+        
 
 class PortScan:
     def __init__(self, host = "localhost"):
